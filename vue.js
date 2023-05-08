@@ -2,6 +2,7 @@ const app = Vue.createApp({
     data() {
       return {
             activeIndex: 0,
+            interval: setInterval(this.nextSlide, 3000),
             images: [
                 {
                     image: 'img/01.webp',
@@ -41,10 +42,16 @@ const app = Vue.createApp({
                 this.activeIndex = this.images.length - 1;
             }
         },
+        playAutoRun() {
+            this.interval = setInterval(this.nextSlide, 3000);
+        },
+        stopAutoRun() {
+            clearInterval(this.interval);
+        },
   
     },
     created() {
-        setInterval(this.nextSlide, 3000);
+        this.interval;
     },
   });
   

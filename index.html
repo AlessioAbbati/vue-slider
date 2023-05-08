@@ -14,7 +14,10 @@
 <body>
     <div class="container">
 		<div class="carousel" id="app">
-			<div class="highlighted">
+			<div class="highlighted"
+            @mouseover="stopAutoRun"
+            @mouseleave="playAutoRun"
+            >
 				<div 
 				    class="img_container"
 					v-for="(item, index) in images" 
