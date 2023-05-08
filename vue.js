@@ -43,6 +43,9 @@ const app = Vue.createApp({
         },
   
     },
+    created() {
+        setInterval(this.nextSlide, 3000);
+    },
   });
   
   app.mount("#app");
