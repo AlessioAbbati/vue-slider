@@ -18,7 +18,7 @@
 					v-for="(item, index) in images" 
                     :class="index == activeIndex ? 'active' : ' '"
 				>
-					<img src=item.image} 
+					<img src="item.image" 
 					alt=""
 			    >
 				<div class="text">
@@ -38,7 +38,7 @@
 					@click="nextSlide"></i>
 				</div>
 				<img
-				    v-for="(item, index) in arrImages" 
+				    v-for="(item, index) in images" 
 					:key="index"
                     :class="index == activeIndex ? 'active' : ' '"
                     :src="item.image" 

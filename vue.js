@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
       return {
-        activeIndex: 0,
+            activeIndex: 0,
             images: [
                 {
                     image: 'img/01.webp',
