@@ -18,7 +18,7 @@
 					v-for="(item, index) in images" 
                     :class="index == activeIndex ? 'active' : ' '"
 				>
-					<img src="item.image" 
+					<img :src="item.image" 
 					alt=""
 			    >
 				<div class="text">
@@ -26,8 +26,8 @@
 					<p>{{ item.text }}</p>
 				</div>
 					
-			</div>;
-			</div>
+			    </div>
+            </div>
 
 			<!-- div con le miniature -->
 			<div class="thumbs">
