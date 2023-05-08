@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.carousel {
+    display: flex;
+    width: 900px;
+    max-width: 100%;
+    height: 500px;
+    max-height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.highlighted {
+    height: 100%;
+    width: 80%;
+}
+
+.thumbs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.img_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.title {
+    color: red;
+    position: absolute;
+    right: 2%;
+    bottom: 12.5%;
+}
+
+.text {
+    color: red;
+    position: absolute;
+    left: 20%;
+    right: 2%;
+    bottom: 4.5%;
+    text-align: right;
+}
+
+.highlighted .img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlighted .img_container {
+    display: none;
+}
+
+.highlighted .img_container.active {
+    display: block !important;
+}
+
+.carousel .highlighted.active {
+    display: block;
+}
+
+.carousel .controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2.5rem;
+    z-index: 9;
+}
+
+.thumbs img {
+    flex: 1 0 0;
+    display: block;
+    width: 100%;
+    height: 0;
+    object-fit: cover;
+    filter: brightness(.3);
+}
+
+.thumbs .active {
+    filter: brightness(1);
+    border: 5px solid lightgrey;
+}

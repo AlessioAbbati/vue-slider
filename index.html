@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+		<div class="carousel" id="app">
+			<div class="highlighted">
+				<div 
+				    class="img_container"
+					v-for="(item, index) in images" 
+                    :class="index == activeIndex ? 'active' : ' '"
+				>
+					<img src=item.image} 
+					alt=""
+			    >
+				<div class="text">
+					<h3>{{ item.title }}</h3>
+					<p>{{ item.text }}</p>
+				</div>
+					
+			</div>;
+			</div>
+
+			<!-- div con le miniature -->
+			<div class="thumbs">
+				<div class="controls">
+					<i class="bi bi-arrow-up-circle-fill btn btn-prev"
+					@click="prevSlide"></i>
+					<i class="bi bi-arrow-down-circle-fill btn btn-next"
+					@click="nextSlide"></i>
+				</div>
+				<img
+				    v-for="(item, index) in arrImages" 
+					:key="index"
+                    :class="index == activeIndex ? 'active' : ' '"
+                    :src="item.image" 
+                    alt=""
+                >
+			</div>
+            
+		</div>
+        <button class="btn-control">stop</button>
+        <button class="btn-invert">invert</button>
+	</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="vue.js"></script>
+</body>
+
+</html>
