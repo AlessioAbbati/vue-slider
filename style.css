@@ -83,7 +83,7 @@
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    color: black;
+    color: white;
     font-size: 2.5rem;
     z-index: 9;
 }
