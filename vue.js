@@ -42,6 +42,9 @@ const app = Vue.createApp({
                 this.activeIndex = this.images.length - 1;
             }
         },
+        thumbs(index) {
+            this.activeIndex = index;
+        },
         playAutoRun() {
             this.interval = setInterval(this.nextSlide, 3000);
         },
